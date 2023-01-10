@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Section</title>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/committee.css">
+
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+
+          .card {
+            @apply flex items-center justify-center flex-col gap-2 p-5 w-full sm:w-72 h-full bg-gray-100 border rounded-2xl
+          }
+
+        }
+    </style>
+    <!--Tailwind CSS-->
+
+    <!--Font-Awesome-->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+</head>
+
+<body>
+    <!-- main  -->
+<div class="bg-gray-200 py-4 shadow">
+
+    <nav class="max-w-6xl mx-auto flex justify-between px-10">
+      <!--  logo     -->
+      <div class="flex items-center">
+        <div class="font-bold flex items-center uppercase">
+          <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+          </svg> Logo
+  
+        </div>
+  
+        <!--  primary navigation  -->
+        <div class="hidden md:flex ml-10 items-center  divide-x divide-gray-500">
+          <a class="px-3" href="#">Home</a>
+          <a class="px-3" href="#">About</a>
+          <a class="px-3" href="#">Prices</a>
+          <a class="px-3" href="#">Contact</a>
+        </div>
+      </div>
+  
+      <!--  Secund navigation   -->
+      <div class="hidden md:flex  items-center divide-gray-500 divide-x">
+        <a class="px-3" href="#">Sign-in</a>
+        <a class="px-3" href="#">Login</a>
+      </div>
+  
+      <!--  Mobile Menu    -->
+      <div class="md:hidden flex items-center">
+        <button class="menu-button focus:outline-none hover:bg-gray-300 hover:text-gray-800 rounded-full transition duration-500  p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+  
+    </nav>
+  
+    <div class="menu-navigation mt-3 md:hidden hidden px-10 flex flex-col divide-y divide-gray-600">
+      <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Home</a>
+      <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">About</a>
+      <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Prices</a>
+      <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Contact</a>
+      <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Sign-in</a>
+      <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Login</a>
+    </div>
+  </div>
+  <!-- // endMain  -->
+
+    <div class="container mx-auto py-8">
+
+        <div class="flex flex-col text-center gap-4 mb-8 p-4">
+
+            <div class="text-purple-600 text-sm font-bold">Our team</div>
+
+            <div class="text-gray-900 text-3xl md:text-4xl font-bold">Some of the people you'll be working with</div>
+
+            <div class="text-gray-600 md:text-lg">We're a 100% remote team spread all across the world. Join us!</div>
+
+        </div>
+
+        <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Olivia Rhye</div>
+
+                <div class="text-purple-600">Founder & CEO</div>
+                
+                <div class="text-gray-600">Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Phoenix Baker</div>
+
+                <div class="text-purple-600">Engineering Manager</div>
+                
+                <div class="text-gray-600">Lead engineering teams at Figma, Pitch, and Protocol Labs.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Olivia Rhye</div>
+
+                <div class="text-purple-600">Founder & CEO</div>
+                
+                <div class="text-gray-600">Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Phoenix Baker</div>
+
+                <div class="text-purple-600">Engineering Manager</div>
+                
+                <div class="text-gray-600">Lead engineering teams at Figma, Pitch, and Protocol Labs.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Olivia Rhye</div>
+
+                <div class="text-purple-600">Founder & CEO</div>
+                
+                <div class="text-gray-600">Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Phoenix Baker</div>
+
+                <div class="text-purple-600">Engineering Manager</div>
+                
+                <div class="text-gray-600">Lead engineering teams at Figma, Pitch, and Protocol Labs.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Olivia Rhye</div>
+
+                <div class="text-purple-600">Founder & CEO</div>
+                
+                <div class="text-gray-600">Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Phoenix Baker</div>
+
+                <div class="text-purple-600">Engineering Manager</div>
+                
+                <div class="text-gray-600">Lead engineering teams at Figma, Pitch, and Protocol Labs.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Olivia Rhye</div>
+
+                <div class="text-purple-600">Founder & CEO</div>
+                
+                <div class="text-gray-600">Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+
+                <div class="text-gray-900 text-lg font-bold">Phoenix Baker</div>
+
+                <div class="text-purple-600">Engineering Manager</div>
+                
+                <div class="text-gray-600">Lead engineering teams at Figma, Pitch, and Protocol Labs.</div>
+                
+                <div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+                    <i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                    <i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+<script>
+    
+    const menuButton = document.querySelector("button.menu-button");
+const menu = document.querySelector(".menu-navigation");
+
+menuButton.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
+</script>
+</body>
+
+</html>
