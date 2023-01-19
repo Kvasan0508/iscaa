@@ -1,3 +1,4 @@
+
 p,
 li {
   font-family: 'Dosis', sans-serif !important;
@@ -756,6 +757,7 @@ em.timeline-item {
   font-size: 21px;
   text-align: center;
   background: #003366;
+  color:#fff!important;
 }
 
 i.fa.fa-check-square-o {
