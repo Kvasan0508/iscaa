@@ -1,562 +1,481 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Committee | ICCSEA</title>
 
     <!--Custom CSS-->
-    <link rel="stylesheet" href="css/committee.css">
+    <link rel="stylesheet" href="css/committee.css" />
 
     <!--Tailwind CSS-->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style type="text/tailwindcss">
-        @layer components {
-
-          .card {
-            @apply flex items-center justify-center flex-col gap-2 p-5 w-full sm:w-72 h-full bg-gray-100 border rounded-2xl
-          }
-
+      @layer components {
+        .card {
+          @apply flex items-center justify-center flex-col gap-2 p-5 w-full sm:w-72 h-full bg-gray-100 border rounded-2xl;
         }
-        .img-logo{
-		width:220px;
-		height: auto;
-	}
+      }
+      .img-logo {
+        width: 220px;
+        height: auto;
+      }
     </style>
     <!--Tailwind CSS-->
 
     <!--Font-Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- main  -->
     <div class="bg-gray-200 py-4 shadow">
+      <nav class="max-w-6xl mx-auto flex justify-between px-10">
+        <!--  logo     -->
+        <div class="flex items-center">
+          <div class="font-bold flex items-center uppercase">
+            <img src="images/iscca-logo.svg" alt="" class="img-logo" />
+            <style>
+              .img-fluid {
+                width: 50%;
+                height: auto;
+              }
+            </style>
+          </div>
 
-        <nav class="max-w-6xl mx-auto flex justify-between px-10">
-            <!--  logo     -->
-            <div class="flex items-center">
-                <div class="font-bold flex items-center uppercase">
-                    <img src="images/iscca-logo.svg" alt="" class="img-logo">
-                    <style>
-                        .img-fluid {
-                            width: 50%;
-                            height: auto;
-                        }
-                    </style>
-                </div>
-
-                <!--  primary navigation  -->
-                <div class="hidden md:flex ml-10 items-center  divide-x divide-gray-500">
-                    <a class="px-3" href="index.html">Home</a>
-                    <!-- <a class="px-3" href="#">About</a>
+          <!--  primary navigation  -->
+          <div
+            class="hidden md:flex ml-10 items-center divide-x divide-gray-500"
+          >
+            <a class="px-3" href="index.html">Home</a>
+            <!-- <a class="px-3" href="#">About</a>
           <a class="px-3" href="#">Prices</a>
           <a class="px-3" href="#">Contact</a> -->
-                </div>
-            </div>
+          </div>
+        </div>
 
+        <!--  Mobile Menu    -->
+        <div class="md:hidden flex items-center">
+          <button
+            class="menu-button focus:outline-none hover:bg-gray-300 hover:text-gray-800 rounded-full transition duration-500 p-2"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
 
-            <!--  Mobile Menu    -->
-            <div class="md:hidden flex items-center">
-                <button
-                    class="menu-button focus:outline-none hover:bg-gray-300 hover:text-gray-800 rounded-full transition duration-500  p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-
-        </nav>
-
-        <div class="menu-navigation mt-3 md:hidden hidden px-10 flex flex-col divide-y divide-gray-600">
-            <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Home</a>
-            <!-- <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">About</a>
+      <div
+        class="menu-navigation mt-3 md:hidden hidden px-10 flex flex-col divide-y divide-gray-600"
+      >
+        <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Home</a>
+        <!-- <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">About</a>
       <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Prices</a>
       <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Contact</a>
       <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Sign-in</a>
       <a class="block px-3 py-3 text-sm hover:bg-gray-400" href="#">Login</a> -->
-        </div>
+      </div>
     </div>
     <!-- // endMain  -->
 
     <div class="container mx-auto py-8">
+      <div class="flex flex-col text-center gap-4 mb-8 p-4">
+        <!-- <div class="text-purple-600 text-sm font-bold">Our team</div> -->
 
-        <div class="flex flex-col text-center gap-4 mb-8 p-4">
-
-            <!-- <div class="text-purple-600 text-sm font-bold">Our team</div> -->
-
-            <div class="text-gray-900 text-3xl md:text-4xl font-bold">Our committee</div>
-
-            <!-- <div class="text-gray-600 md:text-lg">We're a 100% remote team spread all across the world. Join us!</div> -->
-
-        </div>
-        <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">Chief Patron</div>
-
-
-        <div class="flex items-center justify-center flex-wrap gap-4 p-4">
-
-
-
-            <div class="card">
-
-                <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
-
-                <div class="text-gray-900 text-lg font-bold">Alhaj Janab  S.M. Mohamed Yousuf
-                </div>
-
-
-                <div class="text-purple-600">Chairman </div>
-            </div>
-        </div> <br> <br>
-        <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold"> Co Chief Patron</div>
-        <div class="flex items-center justify-center flex-wrap gap-4 p-4">
-
-            <div class="card">
-
-                <!-- <img src="images/secretary.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
-
-                <div class="text-gray-900 text-lg font-bold">Mrs.S.M.H SHARMILA 
-                </div>
-
-
-                <div class="text-purple-600">Secretary </div>
-            </div>
-            <div class="card">
-
-                <!-- <img src="images/secretary.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
-
-                <div class="text-gray-900 text-lg font-bold">Janab  P.R.L Mr. HAMID IBRAHIM
-                </div>
-
-
-                <div class="text-purple-600">Executive DIRECTOR </div>
-            </div>
-            <div class="card">
-
-                <!-- <img src="images/secretary.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
-
-                <div class="text-gray-900 text-lg font-bold">Mr. HABEEB MOHAMED SMAJ
-                </div>
-
-
-                <div class="text-purple-600">DIRECTOR </div>
-            </div>
-        </div>
-        <br>
-
-        <br>
-        <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold"> Patron</div>
-        <div class="flex items-center justify-center flex-wrap gap-4 p-4">
-            <div class="card">
-
-                <!-- <img src="images/secretary.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
-
-                <div class="text-gray-900 text-lg font-bold">Dr. R.Senthikumar </div>
-
-
-                <div class="text-purple-600">Principal </div>
-            </div>
+        <div class="text-gray-900 text-3xl md:text-4xl font-bold">
+          Our committee
         </div>
 
-        <br>
+        <!-- <div class="text-gray-600 md:text-lg">We're a 100% remote team spread all across the world. Join us!</div> -->
+      </div>
+      <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">
+        Chief Patron
+      </div>
 
-        <br>
-        <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold"> Co Patron</div>
-        <div class="flex items-center justify-center flex-wrap gap-4 p-4">
-            <div class="card">
+      <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
 
+          <div class="text-gray-900 text-lg font-bold">
+            Alhaj Janab S.M. Mohamed Yousuf
+          </div>
 
-
-                <div class="text-gray-900 text-lg font-bold">Dr.E.Dhiravidachelvi </div>
-                <div class="text-purple-600"> Professor/ECE</div>
-
-
-
-            </div>
+          <div class="text-purple-600">Chairman</div>
         </div>
-        <br>
+      </div>
+      <br />
+      <br />
+      <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">
+        Co Chief Patron
+      </div>
+      <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+        <div class="card">
+          <!-- <img src="images/secretary.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
 
-        <br>
-        <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">Convenor</div>
-        <div class="flex items-center justify-center flex-wrap gap-4 p-4">
-            <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Mrs.S.M.H SHARMILA</div>
 
-
-
-                <div class="text-gray-900 text-lg font-bold">Dr.M.Vijayaraj </div>
-                <div class="text-purple-600"> Professor & Head /CSE</div>
-
-
-
-            </div>
+          <div class="text-purple-600">Secretary</div>
         </div>
-        <br>
+        <div class="card">
+          <!-- <img src="images/secretary.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
 
-        <br>
-        <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">Organizing Chair</div>
-        <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+          <div class="text-gray-900 text-lg font-bold">
+            Janab P.R.L Mr. HAMID IBRAHIM
+          </div>
 
+          <div class="text-purple-600">Executive DIRECTOR</div>
+        </div>
+        <div class="card">
+          <!-- <img src="images/secretary.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
 
+          <div class="text-gray-900 text-lg font-bold">
+            Mr. HABEEB MOHAMED SMAJ
+          </div>
 
-            <div class="card">
+          <div class="text-purple-600">DIRECTOR</div>
+        </div>
+      </div>
+      <br />
 
+      <br />
+      <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">
+        Patron
+      </div>
+      <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+        <div class="card">
+          <!-- <img src="images/secretary.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
 
+          <div class="text-gray-900 text-lg font-bold">Dr. R.Senthikumar</div>
 
-                <div class="text-gray-900 text-lg font-bold">Prof.H.Peeroli</div>
-                <div class="text-purple-600"> HOD/ECE</div>
+          <div class="text-purple-600">Principal</div>
+        </div>
+      </div>
 
+      <br />
 
+      <br />
+      <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">
+        Co Patron
+      </div>
+      <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">
+            Dr.E.Dhiravidachelvi
+          </div>
+          <div class="text-purple-600">Professor/ECE</div>
+        </div>
+      </div>
+      <br />
 
-            </div> <br>
+      <br />
+      <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">
+        Convenor
+      </div>
+      <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.M.Vijayaraj</div>
+          <div class="text-purple-600">Professor & Head /CSE</div>
+        </div>
+      </div>
+      <br />
 
-            <div class="card">
+      <br />
+      <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">
+        Organizing Chair
+      </div>
+      <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Prof.H.Peeroli</div>
+          <div class="text-purple-600">HOD/ECE</div>
+        </div>
+        <br />
 
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">
+            Prof. Dr.B.Aysha Banu
+          </div>
+          <div class="text-purple-600">Professor Head / IT</div>
+        </div>
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Prof.M.Mohamed Rafi</div>
+          <div class="text-purple-600">HOD/MCA</div>
+        </div>
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.S.Boobalan</div>
+          <div class="text-purple-600">HOD/EEE</div>
+        </div>
+      </div>
 
+      <br />
 
-                <div class="text-gray-900 text-lg font-bold">Prof. Dr.B.Aysha Banu </div>
-                <div class="text-purple-600">Professor Head / IT</div>
-
-
-
-            </div>
-            <div class="card">
-
-
-
-                <div class="text-gray-900 text-lg font-bold"> Prof.M.Mohamed Rafi</div>
-                <div class="text-purple-600">HOD/MCA</div>
-
-
-
-            </div>
-            <div class="card">
-
-
-
-                <div class="text-gray-900 text-lg font-bold">Dr.S.Boobalan</div>
-                <div class="text-purple-600">HOD/EEE</div>
-
-
-
-            </div>
+      <br />
+      <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">
+        Organizing Committee Members
+      </div>
+      <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.T.Sheik Yousuf</div>
+          <div class="text-purple-600">Professor/CSE</div>
+        </div>
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.B.Rasina Begum</div>
+          <div class="text-purple-600">Asso.Professor/CSE</div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.V.Balamurugan</div>
+          <div class="text-purple-600">Asso Professor/CSE</div>
+        </div>
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.A.Shyamala</div>
+          <div class="text-purple-600">Professor/ECE</div>
         </div>
 
-        <br>
-
-        <br>
-        <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">Organizing Committee Members </div>
-        <div class="flex items-center justify-center flex-wrap gap-4 p-4">
-
-
-
-
-            <div class="card">
-
-
-
-                <div class="text-gray-900 text-lg font-bold">Dr.T.Sheik Yousuf</div>
-                <div class="text-purple-600">Professor/CSE</div>
-
-
-
-            </div>
-            <div class="card">
-
-
-
-                <div class="text-gray-900 text-lg font-bold"> Dr.B.Rasina Begum</div>
-                <div class="text-purple-600"> Asso.Professor/CSE
-                </div>
-
-
-
-            </div>
-            <br>
-            <div class="card">
-
-
-
-                <div class="text-gray-900 text-lg font-bold">Dr.V.Balamurugan </div>
-                <div class="text-purple-600"> Asso Professor/CSE
-                </div>
-
-
-            </div>
-            <div class="card">
-
-
-
-                <div class="text-gray-900 text-lg font-bold">Dr.A.Shyamala </div>
-                <div class="text-purple-600"> Professor/ECE
-                </div>
-
-
-
-            </div>
-
-            <div class="card">
-
-
-
-                <div class="text-gray-900 text-lg font-bold"> S.Vengateshkumar </div>
-                <div class="text-purple-600"> AP/ECE
-                </div>
-
-
-
-            </div>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> M.Seeni Syed Raviyathu Ammal </div>
-                <div class="text-purple-600"> Asso.Professor/IT
-
-                </div>
-
-
-
-            </div> <br>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> K.Samundeeshwari
-                </div>
-                <div class="text-purple-600"> Asso.Professor/IT
-
-                </div>
-
-
-
-            </div>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> S.Karthiyayini
-                </div>
-                <div class="text-purple-600"> Asso.Professor/IT
-
-                </div>
-
-
-
-            </div>
-
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> N.Balasubramaniyan
-                </div>
-                <div class="text-purple-600"> Asso.Professor/MCA
-
-                </div>
-
-
-
-
-
-            </div>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> Dr.S.Sajitha Bhanu
-                </div>
-                <div class="text-purple-600"> Asso.Professor/MCA
-
-                </div>
-
-
-
-
-
-
-            </div> <br>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> Prof.M.Mohamed Sithik
-
-                </div>
-                <div class="text-purple-600"> Asso.Professor/CSE
-
-                </div>
-
-
-
-
-
-
-            </div> <br>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> M.Seeni Syed Raviyathu Ammal
-
-
-                </div>
-                <div class="text-purple-600"> Asso.Professor/IT
-
-                </div>
-
-
-
-
-
-
-            </div> <br>
-
-
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> Dr.S.Lakshmi Kanthan Bharathi
-
-
-
-                </div>
-                <div class="text-purple-600"> Asso.Prof/EEE
-
-                </div>
-
-
-
-
-
-
-            </div> <br>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> Dr.M.Sarojini Devi
-
-
-
-
-                </div>
-                <div class="text-purple-600"> Asso.Prof/EEE
-
-
-                </div>
-
-
-
-
-
-
-            </div> <br>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> Dr.R.Niraimathi
-
-
-
-
-
-                </div>
-                <div class="text-purple-600"> Asso.Prof/EEE
-
-
-                </div>
-
-
-
-
-
-
-            </div> <br>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> Dr.A.Manjula
-
-
-
-
-                </div>
-                <div class="text-purple-600"> Asso.Prof/EEE
-
-
-                </div>
-
-
-
-
-
-
-            </div> <br>
-            <div class="card">
-
-
-                <div class="text-gray-900 text-lg font-bold"> M.Sabariramachandran
-                </div>
-                <div class="text-purple-600"> Asst.Professor /MCA.
-                </div>
-
-
-
-
-
-            </div>
-        </div> <br> <br>
-        <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">Technical Committee</div>
-
-
-        <div class="flex items-center justify-center flex-wrap gap-4 p-4">
-           
-
-                       
-            <div class="card">
-               
-                <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
-
-                <div class="text-gray-900 text-lg font-bold">Prof.S.Ramamoorthi 
-                </div>
-
-               
-                <div class="text-purple-600">Asst.Professor/CSE	</div>
-            </div> 
-             <br>
-            <div class="card">
-               
-                <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
-
-                <div class="text-gray-900 text-lg font-bold">Prof.S.A.Mohamed Uveise
-                </div>
-
-               
-                <div class="text-purple-600">Asst.Professor/CSE	</div>
-            </div> 
-            </div> 
-
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">S.Vengateshkumar</div>
+          <div class="text-purple-600">AP/ECE</div>
+        </div>
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">
+            M.Seeni Syed Raviyathu Ammal
+          </div>
+          <div class="text-purple-600">Asso.Professor/IT</div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">K.Samundeeshwari</div>
+          <div class="text-purple-600">Asso.Professor/IT</div>
+        </div>
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">S.Karthiyayini</div>
+          <div class="text-purple-600">Asso.Professor/IT</div>
+        </div>
+
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">N.Balasubramaniyan</div>
+          <div class="text-purple-600">Asso.Professor/MCA</div>
+        </div>
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.S.Sajitha Bhanu</div>
+          <div class="text-purple-600">Asso.Professor/MCA</div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">
+            Prof.M.Mohamed Sithik
+          </div>
+          <div class="text-purple-600">Asso.Professor/CSE</div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">
+            M.Seeni Syed Raviyathu Ammal
+          </div>
+          <div class="text-purple-600">Asso.Professor/IT</div>
+        </div>
+        <br />
+
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">
+            Dr.S.Lakshmi Kanthan Bharathi
+          </div>
+          <div class="text-purple-600">Asso.Prof/EEE</div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.M.Sarojini Devi</div>
+          <div class="text-purple-600">Asso.Prof/EEE</div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.R.Niraimathi</div>
+          <div class="text-purple-600">Asso.Prof/EEE</div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">Dr.A.Manjula</div>
+          <div class="text-purple-600">Asso.Prof/EEE</div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="text-gray-900 text-lg font-bold">
+            M.Sabariramachandran
+          </div>
+          <div class="text-purple-600">Asst.Professor /MCA.</div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">
+        Technical Committee
+      </div>
+
+      <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">Prof.S.Ramamoorthi</div>
+
+          <div class="text-purple-600">Asst.Professor/CSE</div>
+        </div>
+        <br />
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">
+            Prof.S.A.Mohamed Uveise
+          </div>
+
+          <div class="text-purple-600">Asst.Professor/CSE</div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <div class="text-gray-900 text-1xl text-center md:text-2xl font-bold">
+        Advisory Committee:
+      </div>
+
+      <div class="flex items-center justify-center flex-wrap gap-4 p-4">
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">Dr. K.S. Srinivasan</div>
+
+          <div class="text-purple-600">
+            Principal, Mohamed Sathak A.J. College of Engineering, Chennai.
+          </div>
+        </div>
+        <br />
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">Dr. A Muthumari</div>
+
+          <div class="text-purple-600">
+            HoD / CSE , University College of Engineering, Ramanathapuram.
+          </div>
+        </div>
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">Dr. R.Jayachandran</div>
+
+          <div class="text-purple-600">
+            Dy Director R&D/Prof, CSE, AVIT, Chengalpattu.
+          </div>
+        </div>
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">
+            Dr. S.Kanaga Suba Raja
+          </div>
+
+          <div class="text-purple-600">
+            Prof/Head of AI& DS, Easwari Engineering College, Chennai.
+          </div>
+        </div>
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">Dr. Prabu Mohandas</div>
+
+          <div class="text-purple-600">
+            Asst Prof /CSE, National Institute of technology, Chandigarh.
+          </div>
+        </div>
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">
+            Dr. V D Ambeth Kumar
+          </div>
+
+          <div class="text-purple-600">
+            Asso Prof/CSE, Mizoram University, Mizoram.
+          </div>
+        </div>
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">
+            Dr.Suseela Sellamuthu
+          </div>
+
+          <div class="text-purple-600">Asst Prof, Sr/ CSE, VIT, Chennai.</div>
+        </div>
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">Dr.R.Krithiga</div>
+
+          <div class="text-purple-600">Asst Prof, Sr/ CSE, VIT, Chennai.</div>
+        </div> <br>
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">
+            Dr. Jafer Ali Ibrahim Syed Masood
+          </div>
+
+          <div class="text-purple-600">Asst.Prof/ IoT, VIT, Vellore.</div>
+        </div>
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">Dr.Sreekanth D</div>
+
+          <div class="text-purple-600">
+            Head of research & Solutions, ICTAK, Kerala.
+          </div>
+        </div>
+        <div class="card">
+          <!-- <img src="images/chairman.jpg" class="w-40 h-30 rounded-full object-cover transition duration-200 hover:scale-110"> -->
+
+          <div class="text-gray-900 text-lg font-bold">
+            Mr. R. Arun Ram, Technical Associative
+          </div>
+
+          <div class="text-purple-600">Monzha Research Labs, Cochin.</div>
+        </div>
+      </div>
     </div>
+
     <script>
+      const menuButton = document.querySelector("button.menu-button");
+      const menu = document.querySelector(".menu-navigation");
 
-        const menuButton = document.querySelector("button.menu-button");
-        const menu = document.querySelector(".menu-navigation");
-
-        menuButton.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-
+      menuButton.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
     </script>
 
-
     <footer class="footer-1 bg-white-100 py-8 sm:py-12">
-        <div class="container mx-auto px-4">
-
-            <img src="images/iscca-logo.svg" alt="">
-        </div>
+      <div class="container mx-auto px-4">
+        <img src="images/iscca-logo.svg" alt="" />
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
